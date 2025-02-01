@@ -51,7 +51,7 @@ void checkout(char e[],int t);
 void membercheckout(char e[],int t);
 double allintegral(char e[],double i);
 void enterinformation(char e[]);
-int atime(int t)//赵新航 
+int atime(int t)
 {
 	int a,b,c,d;
 	d=1;
@@ -123,7 +123,7 @@ int atime(int t)//赵新航
 		return d;
 	}
 }
-void changes(char e[])//赵新航 
+void changes(char e[])
 {
 	struct Users ir;
 	char a[20];
@@ -159,7 +159,7 @@ void changes(char e[])//赵新航
 	remove("users.bin"); 
 	rename("temp.bin", "users.bin");  
  } 
-void commodity(int t,char e[],FILE* ap) //柳心怡 
+void commodity(int t,char e[],FILE* ap)
 {
 	FILE* rp;
 	struct Commodity ir;
@@ -334,7 +334,7 @@ void commodity(int t,char e[],FILE* ap) //柳心怡
 			break;
 	}
 }
-void removeinformation(char e[],int t) //柳心怡 
+void removeinformation(char e[],int t)
 {
 	struct Users ir;
 	FILE* fp;
@@ -362,7 +362,7 @@ void removeinformation(char e[],int t) //柳心怡
 	printf("操作完成，将为你跳转到结账界面...\n");
 	checkout(e,t);
 }
-double allintegral(char e[],double i)//柳心怡 
+double allintegral(char e[],double i)
 {
     struct Users ir;
     FILE* fp;
@@ -391,7 +391,7 @@ double allintegral(char e[],double i)//柳心怡
     rename("transition.bin", "users.bin");
     return i;
 }
-void enterinformation(char e[]) //柳心怡 
+void enterinformation(char e[])
 {
 	printf("请输入你想要注册的会员时长(年)："); 
 	int m;
@@ -428,7 +428,7 @@ void enterinformation(char e[]) //柳心怡
 	rename("temp.bin","users.bin");
 	printf("\033[1;32m操作完成！\033[0m\n");
 }
-void logoffmembership(char e[],int t)//柳心怡 
+void logoffmembership(char e[],int t) 
 {
 	printf("您已来到注销界面\n");
 	printf("是否确定注销\n");
@@ -452,7 +452,7 @@ void logoffmembership(char e[],int t)//柳心怡
 			break;
 	}
 }
-void checkout(char e[],int t)//柳心怡 
+void checkout(char e[],int t)
 {
 	printf("欢迎来到结账界面\n");
 	int a=0; 
@@ -495,7 +495,7 @@ void checkout(char e[],int t)//柳心怡
 	q=allintegral(e,q);
 	printf(",结账成功，感谢您的使用,您目前积分为%lf\n",q); 
 }
-void registeredmember(char e[],int t)//柳心怡 
+void registeredmember(char e[],int t) 
 {
 	printf("欢迎来到注册会员界面\n");
 	struct Users people;
@@ -541,7 +541,7 @@ void registeredmember(char e[],int t)//柳心怡
 			}
 	}
 }
-void membershiprenewal(char e[],int t)//柳心怡 
+void membershiprenewal(char e[],int t) 
 {
 	printf("欢迎来到会员续费界面\n");
 	printf("会员年费：150元\n"); 
@@ -598,7 +598,7 @@ void membershiprenewal(char e[],int t)//柳心怡
 			break;
 	}
 }
-void membercheckout(char e[],int t) //柳心怡 
+void membercheckout(char e[],int t)
 {
 	int a=0; 
 	int i=1;
@@ -643,7 +643,7 @@ void membercheckout(char e[],int t) //柳心怡
 	q=allintegral(e,q*0.9);
 	printf("结账成功，感谢您的使用,您目前积分为%lf\n",q); 
 }
-void manualcheckout(char e[])//柳心怡 
+void manualcheckout(char e[])
 {
 	printf("欢迎使用人工结账\n");
 	struct Users text;
@@ -669,7 +669,7 @@ void manualcheckout(char e[])//柳心怡
 		chose(e,1);
 	}
 }
-void automaticcheckout(char e[]) //柳心怡 
+void automaticcheckout(char e[])
 {
 	printf("欢迎自主结账\n");
 	int m;
@@ -694,7 +694,7 @@ void automaticcheckout(char e[]) //柳心怡
 	 		break;
       }
 }
-void chose(char e[],int t) //柳心怡 
+void chose(char e[],int t)
 {
 	printf("您目前不是会员！\n");
 	printf("1.注册会员\n");
@@ -718,7 +718,7 @@ void chose(char e[],int t) //柳心怡
 			break;
 	}
 }
-void onlineshopping(char a[],FILE* ap) //柳心怡 
+void onlineshopping(char a[],FILE* ap) 
 {
 	printf("1.果蔬类\n");
 	printf("2.肉类\n");
@@ -736,7 +736,7 @@ void onlineshopping(char a[],FILE* ap) //柳心怡
 	system("cls"); 
 	commodity(x,a,ap);
 }
-void offlineshopping(char e[],FILE* ap) //柳心怡 
+void offlineshopping(char e[],FILE* ap) 
 {
 	printf("欢迎使用线下购物！\n");
 	printf("请选择你想要查询的商品种类：\n");
@@ -929,7 +929,7 @@ void offlineshopping(char e[],FILE* ap) //柳心怡
 			}
 	}	
 }
-void textmembership(char e[],int t)//柳心怡 
+void textmembership(char e[],int t) 
 {
 	struct Users text;
 	struct Users real;
@@ -987,7 +987,7 @@ void textmembership(char e[],int t)//柳心怡
 		}
     }
 }
-void shopping(char a[])//柳心怡 
+void shopping(char a[])
 {
 	printf("1.线上购物\n");
 	printf("2.线下购物\n");
@@ -1016,7 +1016,7 @@ void shopping(char a[])//柳心怡
 	}
 	fclose(ap);
 }
-void setupanaccount()//柳心怡  
+void setupanaccount()
 {
 	char passwords[20];
 	struct Users sr;
@@ -1102,7 +1102,7 @@ void setupanaccount()//柳心怡
 			break;
 	}
 }
-int loginaccount()//赵新航 
+int loginaccount()
 {
 	char ch;
 	char a[20],b[20]; 
@@ -1197,7 +1197,7 @@ int loginaccount()//赵新航
     fclose(fp);
     return y;
 }
-void custom()//赵新航 
+void custom() 
 {
 	int i;
 	printf("1.有账号\n");
@@ -1241,7 +1241,7 @@ void custom()//赵新航
 			break;
 	}
 }
-int dep(char w[])//赵新航
+int dep(char w[])
 {
 	struct Workers ir;
 	FILE* fp;
@@ -1256,7 +1256,7 @@ int dep(char w[])//赵新航
 	fclose(fp);
 	return ir.department;
 }
-int displaytime() //赵新航
+int displaytime()
 {
     time_t rawtime;
     struct tm *timeinfo;
@@ -1266,7 +1266,7 @@ int displaytime() //赵新航
 	t=1900*10000+timeinfo->tm_year*10000+(timeinfo->tm_mon + 1)*100+timeinfo->tm_mday;
     return t;
 }
-void disshow()//赵新航
+void disshow()
 {
 	char name[20];
 	int m;
@@ -1359,7 +1359,7 @@ void disshow()//赵新航
 	printf("\033[1;32m总收入为：\033[0m %lf\n",n);
 	fclose(fp);
 }
-void change()//赵新航
+void change()
 {
 	struct Workers ir;
 	struct Workers sr;
@@ -1513,7 +1513,7 @@ void change()//赵新航
 		}
     }
 }
-void display(int t)//赵新航
+void display(int t)
 {
 	FILE* fp;
 	struct Workers ir;
@@ -1556,7 +1556,7 @@ void display(int t)//赵新航
 	}
 	fclose(fp);
 }
-void addwareh(char w[],int a)//赵新航
+void addwareh(char w[],int a)
 {
 	FILE* fp;
 	fp=fopen("wareh.bin","ab");
@@ -1593,7 +1593,7 @@ void addwareh(char w[],int a)//赵新航
 	fclose(fp);
 	printf("\033[32m进货成功\033[0m\n");
 }
-void addwarehouse(char w[],int a) //赵新航
+void addwarehouse(char w[],int a)
 {
 	int c,d;
 	FILE* rp;
@@ -1696,7 +1696,7 @@ void addwarehouse(char w[],int a) //赵新航
 	rename("temp.bin", "warehouse.bin"); 
 	printf("\033[1;32m上架成功\033[0m\n");
 }
-void delwarehouse(char w[],int a) //赵新航
+void delwarehouse(char w[],int a)
 {
 	int i=0;
 	FILE* rp;
@@ -1772,7 +1772,7 @@ void delwarehouse(char w[],int a) //赵新航
 	if(i==0)
 		printf("没有这款商品存在！！！\n");
 }
-void displayh(char w[],int a) //赵新航
+void displayh(char w[],int a)
 {
 	FILE* rp;
 	struct Commodity ir;
@@ -1813,7 +1813,7 @@ void displayh(char w[],int a) //赵新航
 	}
 	fclose(rp);
 }
-void warehouse(char w[],int a) //赵新航
+void warehouse(char w[],int a)
 {
 	int j,i=1;
 	while(i)
@@ -1873,7 +1873,7 @@ void warehouse(char w[],int a) //赵新航
 		}
 	}
 }
-void accountpassword(int t)//赵新航
+void accountpassword(int t)
 {
 	int i,j,z=0;
 	char ch;
@@ -1968,7 +1968,7 @@ void accountpassword(int t)//赵新航
 		}
 	}
 }
-void addpeople(char w[],int t)//赵新航
+void addpeople(char w[],int t)
 {
 	char a[20];
 	FILE* fp;
@@ -2037,7 +2037,7 @@ void addpeople(char w[],int t)//赵新航
 	fclose(fp);
 	fclose(rp);
 }
-void delpeople(char w[],int t)//赵新航
+void delpeople(char w[],int t)
 {
 	int j,i=1;
 	struct Workers ir; 
@@ -2112,7 +2112,7 @@ void delpeople(char w[],int t)//赵新航
 		rename("temp.bin", "accountpassword.bin");  
 	}
 }
-void manages(char w[],int t) //赵新航
+void manages(char w[],int t)
 {
 	int j,a=1;
 	while(a)
@@ -2183,7 +2183,7 @@ void manages(char w[],int t) //赵新航
 		} 
 	}
 }
-void boss(char w[],int t)//赵新航
+void boss(char w[],int t)
 {
 	int j,a=1;
 	while(a)
@@ -2253,7 +2253,7 @@ void boss(char w[],int t)//赵新航
 		} 
 	}
 }
-int main()//赵新航
+int main()
 {
 	int i;
 	printf("1.客户\n");
